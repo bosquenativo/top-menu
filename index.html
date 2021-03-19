@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <nav class="nav">
+        <a href="https://emancipa.org/biblioteca" class="nav__link">
+            <i class="material-icons nav__icon">article</i>
+        </a>
+        <!-- ... and more links below -->
+    </nav>
+    <section class="full">
+        Abrir biblioteca
+    </section>
+    <style>
+        .full {
+            width: 100%;
+            height: 100%;
+            /* background-color: #eee; */
+            background: rgb(2, 0, 36);
+            background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 34%, rgba(0, 212, 255, 1) 100%);
+            z-index: 90;
+            position: fixed;
+            font-size: large;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            color: white;
+        }
+        
+        .nav {
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            display: flex;
+            overflow-x: auto;
+            border-radius: 50%;
+            z-index: 99;
+            background-color: #eeeeee;
+        }
+        
+        .nav__link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            min-width: 50px;
+            white-space: nowrap;
+            font-family: sans-serif;
+            font-size: 13px;
+            color: #444444;
+            text-decoration: none;
+        }
+        
+        .nav__link:hover {
+            background-color: #eeeeee;
+        }
+        
+        .nav:hover+.full {
+            visibility: visible;
+        }
+    </style>
+
+</body>
+
+</html>
